@@ -13,10 +13,30 @@ function loadFile() {
 
             read.onload = function (e) {
                 document.getElementById('fileArea').value = e.target.result;
+
+                let shouwText = document.getElementById('fileArea').value;
+                // let arrayShouwText2 = [shouwText]
+
+                let deletEnter = shouwText.filter(value => value  !== ' ');
+                console.log(deletEnter);
+
+                for (let count = 0; count <= deletEnter.length; count++) {
+                    let TotalSymbols = "Total symbols: ";
+
+                    let arrayShouwText = [TotalSymbols, count];
+
+
+                    document.getElementById('h3_001').innerHTML = arrayShouwText.join(" ");
+                };
             }
         }
     })
 }
+// let arrayShouwText2 = ['shoow', 'go', 'lol']
+
+
+// let deletEnter = arrayShouwText2.filter(value => value !== 'shoow');
+// console.log(deletEnter)
 
 function shouwfile() {
     let shouwText = document.getElementById('fileArea').value;
@@ -28,12 +48,7 @@ function shouwfile() {
 
         document.getElementById('h3_001').innerHTML = arrayShouwText.join(" ");
 
-        // let shouwfileFilter = shouwText.filter(txt => txt.shouwText = " ")
-        let shouwfileFilter = shouwText.filter(txt => {
 
-            let personAbove20 = txt.shouwText = " ";
-
-        })
     };
 }
 
@@ -57,7 +72,7 @@ function loadFile2() {
             join.readAsArrayBuffer(fileImg);
 
             join.onload = function (e) {
-                // document.getElementById('fileImg').value = e.target.result;
+                document.getElementById('fileImg').value = e.target.result;
                 let x = document.createElement("IMG");
                 x.setAttribute("src", e.target.result);
                 x.setAttribute("width", "304");
