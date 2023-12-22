@@ -1,0 +1,75 @@
+body {
+    background-image: linear-gradient(#00aeff, #ffffff);
+}
+
+header {
+    width: 100%;
+    height: 15%;
+    background-color: #001772;
+}
+
+.header_h1 {
+    color: #ffffff;
+    margin-left: 20%;
+}
+
+.header_h2 {
+    color: #ffffff;
+    margin-left: 45%;
+}
+
+.body_div {
+    width: 60%;
+    height: 80%;
+    margin: 60px auto;
+    border: 4px solid black;
+    border-radius: 20px;
+    background-color: #c4c4ff;
+}
+
+.createAccaunt {
+    cursor: pointer;
+}
+
+.input_div {
+    width: 530px;
+    height: 200px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 23px;
+    grid-row-gap: 14px;
+}
+
+#firstname {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+#lastName {
+    grid-area: 1 / 3 / 2 / 5;
+}
+
+#location {
+    grid-area: 2 / 1 / 3 / 5;
+}
+
+#username {
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+#password {
+    grid-area: 3 / 3 / 4 / 5;
+}
+
+.createAccaunt {
+    grid-area: 4 / 4 / 5 / 5;
+}
+
+.but {
+    width: 100%;
+    height: 100%;
+    border-radius: 60px;
+    background-color: #00a6ff;
+    color: #ffffff;
+}
