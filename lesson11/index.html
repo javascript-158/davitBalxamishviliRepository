@@ -1,0 +1,230 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e77ac3a5f0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- class="myPictures fade" -->
+<!-- class="textNumber" -->
+<!-- class="pictureText" -->
+    <div class="slideshow_container">
+        <div class="myPictures fade">
+            <img src="images/slaider1.jpg" style="width: 100%; height: 300px;">
+        </div>
+
+        <div class="myPictures fade">
+            <img src="images/slaider2.jpg" style="width: 100%; height: 300px;">
+        </div>
+
+        <div class="myPictures fade">
+            <img src="images/slaider3.jpg" style="width: 100%; height: 300px;">
+        </div>
+
+        <div class="myPictures fade">
+            <img src="images/slaider4.png" style="width: 100%; height: 300px;">
+        </div>
+
+        <!-- <a class="previous" onclick="moveSlides(-1)">&#60;</a>
+        <a class="next" onclick="moveSlides(1)">&#62;</a> -->
+
+    </div>
+
+    <div class="dot_conteiner" style="text-align: center;">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <input type="text" id="userInput" placeholder="Search contacts" title="Search by name" onkeyup="searchContact()">
+
+    <!-- <ul id="contacts">
+        <li><a href="#" id="jnsndfklsda">jnsndfklsda</a></li>
+        <li><a href="#" id="vmvv,cvdc">vmvv,cvdc</a></li>
+        <li><a href="#" id="kfeole,dlsc.">kfeole,dlsc.</a></li>
+        <li><a href="#" id="eopkl,cx.">eopkl,cx.</a></li>
+        <li><a href="#" id="kfisdl">kfisdl</a></li>
+        <li><a href="#" id="huejiotkgdj">huejiotkgdj</a></li>
+        <li><a href="#" id="tdkmsklcx">tdkmsklcx</a></li>
+        <li><a href="#" id="mkkmkrf">mkkmkrf</a></li>
+        <li><a href="#" id="qpqp">qpqp</a></li>
+        <li><a href="#" id="ppwvn">ppwvn</a></li>
+        <li><a href="#" id="gbvjdd">gbvjdd</a></li>
+        <li><a href="#" id="lop">lop</a></li>
+        <li><a href="#" id="lkkk">lkkk</a></li>
+        <li><a href="#" id="lnmhjbsd">lnmhjbsd</a></li>
+        <li><a href="#" id="dasdekd">dasdekd</a></li>
+    </ul> -->
+
+    <div class="serch_div_conteiner">
+        <div class="serch_div" id="light teal guitar">
+            <img src="images/Rectangle 3 (4).png" alt="">
+            <div class="serch_div_txt">
+                <h2>light teal guitar</h2>
+                <div class="cost">
+                    <p>200₾</p>
+                    <p>see more</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="serch_div" id="red guitar">
+            <img src="images/Rectangle 4 (1).png" alt="">
+            <div class="serch_div_txt">
+                <h2>red guitar</h2>
+                <div class="cost">
+                    <p>200₾</p>
+                    <p>see more</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="serch_div" id="tropick guitar">
+            <img src="images/Rectangle 4 (2).png" alt="">
+            <div class="serch_div_txt">
+                <h2>tropick guitar</h2>
+                <div class="cost">
+                    <p>200₾</p>
+                    <p>see more</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="serch_div" id="light brown guita">
+            <img src="images/Rectangle 4 (3).png" alt="">
+            <div class="serch_div_txt">
+                <h2>light brown guitar</h2>
+                <div class="cost">
+                    <p>200₾</p>
+                    <p>see more</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="serch_div" id="wood electric guitar">
+            <img src="images/Rectangle 4 (4).png" alt="">
+            <div class="serch_div_txt">
+                <h2>wood electric guitar</h2>
+                <div class="cost">
+                    <p>200₾</p>
+                    <p>see more</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="serch_div" id="teal guitar">
+            <img src="images/Rectangle 4 (5).png" alt="">
+            <div class="serch_div_txt">
+                <h2>teal guitar</h2>
+                <div class="cost">
+                    <p>200₾</p>
+                    <p>see more</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="serch_div" id="orange guitar">
+            <img src="images/Rectangle 4 (6).png" alt="">
+            <div class="serch_div_txt">
+                <h2>orange guitar</h2>
+                <div class="cost">
+                    <p>200₾</p>
+                    <p>see more</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="serch_div" id="dark red guitar">
+            <img src="images/Rectangle 5 (1).png" alt="">
+            <div class="serch_div_txt">
+                <h2>dark red guitar</h2>
+                <div class="cost">
+                    <p>200₾</p>
+                    <p>see more</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="serch_div" id="black guitar">
+            <img src="images/Rectangle 6 (2).png" alt="">
+            <div class="serch_div_txt">
+                <h2>black guitar</h2>
+                <div class="cost">
+                    <p>200₾</p>
+                    <p>see more</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="serch_div" id="dark blue guitar">
+            <img src="images/Rectangle 6 (3).png" alt="">
+            <div class="serch_div_txt">
+                <h2>dark blue guitar</h2>
+                <div class="cost">
+                    <p>200₾</p>
+                    <p>see more</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="serch_div" id="light teal guitar #2">
+            <img src="images/Rectangle 3.png" alt="">
+            <div class="serch_div_txt">
+                <h2>light teal guitar #2</h2>
+                <div class="cost">
+                    <p>200₾</p>
+                    <p>see more</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="serch_div" id="light teal guitar #3">
+            <img src="images/Rectangle 3 (4).png" alt="">
+            <div class="serch_div_txt">
+                <h2>light teal guitar #3</h2>
+                <div class="cost">
+                    <p>200₾</p>
+                    <p>see more</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ₾ -->
+
+    <div class="dot_conteiner" style="text-align: center;">
+        <span class="dot2 active2" onclick="currentSlide(1)"></span>
+        <span class="dot2" onclick="currentSlide(2)"></span>
+        <span class="dot2" onclick="currentSlide(3)"></span>
+        <span class="dot2" onclick="currentSlide(4)"></span>
+    </div>
+    
+    <div class="slideshow_container slideshow_container2">    
+        <a class="previous" onclick="moveSlides(-1)"><i class="fa-solid fa-caret-left"></i></a>
+        <div class="myPictures2 fade">
+            <img src="images/slaider5.png" style="width: 1000px; height: 300px;">
+        </div>
+
+        <div class="myPictures2 fade">
+            <img src="images/slaider6.png" style="width: 1000px; height: 300px;">
+        </div>
+
+        <div class="myPictures2 fade">
+            <img src="images/slaider7.png" style="width: 1000px; height: 300px;">
+        </div>
+
+        <div class="myPictures2 fade">
+            <img src="images/slaider8.png" style="width: 1000px; height: 300px;">
+        </div>
+        <a class="next" onclick="moveSlides(1)"><i class="fa-solid fa-caret-right"></i></a>
+
+    </div>
+    <!-- &#60; -->
+<!-- &#62; -->
+
+    <script type="text/javascript" src="scripts/script.js"></script>
+</body>
+
+</html>
