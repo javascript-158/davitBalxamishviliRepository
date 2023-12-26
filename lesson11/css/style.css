@@ -10,13 +10,12 @@
 }
 
 .previous, .next {
-    /* cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -25px; */
+    height: 0;
+    cursor: pointer;
+    /* width: auto; */
+    margin-top: -25px; 
     padding: 18px;
-    color: red;
+    /* color: blue; */
     /* font-weight: bold; */
     font-size: 48px;
     transition: 0.6s ease;
@@ -24,12 +23,9 @@
     /* user-select: none; */
 }
 
-/* .next {
-    right: 0;
-    border-radius: 4px 0 0 4px;
-} */
-
 .previous:hover, .next:hover {
+    height: 50px;
+    color: blue;
     background-color: rgb(33, 31, 31);
 }
 
@@ -42,11 +38,13 @@
 }
 
 .dot {
+    margin-top: 25px;
     cursor: pointer;
     width: 10px;
     height: 10px;
     border: #255ee4 solid 3px;
     border-radius: 100%;
+    transition: 0.6s ease;
 }
 
 .active {
@@ -63,11 +61,14 @@
 }
 
 .dot2 {
+    margin-top: 25px;
+    margin-bottom: 25px;
     cursor: pointer;
     width: 10px;
     height: 10px;
     border: #255ee4 solid 3px;
     border-radius: 100%;
+    transition: 0.6s ease;
 }
 
 .active2, .dot2:hover {

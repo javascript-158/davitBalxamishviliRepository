@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/e77ac3a5f0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -193,8 +194,15 @@
     </div>
     <!-- ₾ -->
 
-    <div class="slideshow_container slideshow_container2">
-        <a class="previous" onclick="moveSlides(-1)">&#60;</a>
+    <div class="dot_conteiner" style="text-align: center;">
+        <span class="dot2 active2" onclick="currentSlide(1)"></span>
+        <span class="dot2" onclick="currentSlide(2)"></span>
+        <span class="dot2" onclick="currentSlide(3)"></span>
+        <span class="dot2" onclick="currentSlide(4)"></span>
+    </div>
+    
+    <div class="slideshow_container slideshow_container2">    
+        <a class="previous" onclick="moveSlides(-1)"><i class="fa-solid fa-caret-left"></i></a>
         <div class="myPictures2 fade">
             <img src="images/slaider5.png" style="width: 1000px; height: 300px;">
         </div>
@@ -210,16 +218,11 @@
         <div class="myPictures2 fade">
             <img src="images/slaider8.png" style="width: 1000px; height: 300px;">
         </div>
-        <a class="next" onclick="moveSlides(1)">&#62;</a>
+        <a class="next" onclick="moveSlides(1)"><i class="fa-solid fa-caret-right"></i></a>
 
     </div>
-
-    <div class="dot_conteiner" style="text-align: center;">
-        <span class="dot2 active2" onclick="currentSlide(1)"></span>
-        <span class="dot2" onclick="currentSlide(2)"></span>
-        <span class="dot2" onclick="currentSlide(3)"></span>
-        <span class="dot2" onclick="currentSlide(4)"></span>
-    </div>
+    <!-- &#60; -->
+<!-- &#62; -->
 
     <script type="text/javascript" src="scripts/script.js"></script>
 </body>
