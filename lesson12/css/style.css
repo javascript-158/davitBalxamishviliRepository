@@ -1,0 +1,67 @@
+body {
+    background-color: #03d5fa;
+}
+
+.conteiner {
+    width: 200px;
+    margin: 200px auto;
+    border: blue solid 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#email {
+    margin-top: 20px;
+}
+
+.line_conteiner{
+    width: 170px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 3px;
+    color: #13cb13;
+}
+
+.line {
+    width: 33%;
+    height: 5px;
+    background-color: #696969;
+}
+
+.button_conteiner{
+    width: 85%;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+.loginButton {
+    color: white;
+    background-color: #038ffa;
+    border-radius: 20px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.loginButtonA {
+    color: white;
+    background-color: #03fa30;
+    border-radius: 20px;
+    padding: 5px 8px;
+    cursor: pointer;
+    display: none;
+}
+
+.signup {
+    width: 100%;
+    font-size: 30px;
+    padding: 2px 8px;
+}
+
+.name {
+    margin-top: 20px;
+}
