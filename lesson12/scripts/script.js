@@ -14,7 +14,7 @@ function loginButton() {
     let passwordValidatorLV1 = /(?=.*[a-zA-Z\d])[a-zA-Z\d]{8,}/gm
     let passwordValidatorLV2 = /(?=.*[a-zA-Z ])(?=.*\d)(?=.*[!@#$%^&*()])[a-zA-Z \d!@#$%^&*()]{8,}/gm
     let passwordValidatorLV3 = /(?=.*[a-z])(?=.*[A-Z])(?=.* )(?=.*\d)(?=.*[!@#$%^&*()])[a-zA-Z \d!@#$%^&*()]{16,}/gm
-    let numberValidator = /^(?=.*[1-9 ])[1-9 ]{3,}$/gm
+    let numberValidator = /^[\d ]{3,}$/gm
 
 
     if (emailValidator.test(email.value) === true) {
@@ -75,4 +75,41 @@ function loginButton() {
     // } else {
     //     document.getElementById("finishedButton").style.display = "none";
     // }
+}
+
+function signupButton() {
+    let name = document.getElementById("name");
+    let lastName = document.getElementById("lastName");
+    let username = document.getElementById("username");
+    let resultName = document.getElementById("resultName");
+    let resultLastName = document.getElementById("resultLastName");
+    let resultUsername = document.getElementById("resultUsername");
+
+    let nameValidator = /^[a-zA-Z]{1,}$/gm
+    let LastNameValidator = /^[a-zA-Z]{1,}$/gm
+    let usernameValidator = /^[\w-]{2,20}$/gm
+
+    if (nameValidator.test(name.value) === true) {
+        resultName.innerHTML = "სწორია";
+    } else {
+        resultName.innerHTML = "შეცდომა";
+    }
+
+    if (LastNameValidator.test(lastName.value) === true) {
+        resultLastName.innerHTML = "სწორია";
+    } else {
+        resultLastName.innerHTML = "შეცდომა";
+    }
+
+    if (usernameValidator.test(username.value) === true) {
+        resultUsername.innerHTML = "სწორია";
+    } else {
+        resultUsername.innerHTML = "შეცდომა";
+    }
+    
+    console.log(nameValidator.test(name.value) , LastNameValidator.test(lastName.value) , usernameValidator.test(username.value),)
+    if (nameValidator.test(name.value) === true && LastNameValidator.test(lastName.value) === true && usernameValidator.test(username.value) === true) {
+        document.getElementById("loginButtonA").style.display = "block"
+        document.getElementById("signup").style.display = "none"
+    }
 }

@@ -46,3 +46,22 @@ body {
     padding: 5px 8px;
     cursor: pointer;
 }
+
+.loginButtonA {
+    color: white;
+    background-color: #03fa30;
+    border-radius: 20px;
+    padding: 5px 8px;
+    cursor: pointer;
+    display: none;
+}
+
+.signup {
+    width: 100%;
+    font-size: 30px;
+    padding: 2px 8px;
+}
+
+.name {
+    margin-top: 20px;
+}
