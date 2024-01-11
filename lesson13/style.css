@@ -1,0 +1,19 @@
+.signup {
+    width: 250px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 0;
+    margin: 1% auto;
+}
+
+#error {
+    margin: 0;
+    color: #ff0000;
+}
+
+.savePasswordDIV{
+    width: 65%;
+}
