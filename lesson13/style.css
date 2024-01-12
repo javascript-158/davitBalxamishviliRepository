@@ -1,0 +1,59 @@
+body {
+    box-sizing: border-box;
+    background-color: #0088ff;
+}
+
+.signup {
+    padding: 20px 0 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 8px;
+    width: 250px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 0;
+    margin: 10% auto;
+}
+
+.inpurs {
+    padding: 8px 8px;
+}
+
+button {
+    border-radius: 10px;
+    width: 70%;
+    height: 30px;
+    background-color: #0088ff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #42a7ff;
+}
+
+button:active {
+    background-color: #0067c1;
+}
+
+#error {
+    margin: 0;
+    color: #ff0000;
+}
+
+.savePasswordDIV {
+    width: 65%;
+}
+
+.checkbox {
+    accent-color: #0088ff;
+}
+
+.time_conteiner {
+    width: 68%;
+    display: grid;
+    grid-template-columns: 70% 1fr;
+}

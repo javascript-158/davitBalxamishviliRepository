@@ -1,0 +1,29 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form class="signup">
+        <input type="email" id="email" placeholder="Enter email">
+        <input type="password" id="password" placeholder="Enter password">
+        <div class="savePasswordDIV">
+            <input id="savePassword" class="checkbox" type="checkbox">
+            <span>Save password</span>
+        </div>
+        <h5 style="margin: 0;color: #00b7ffa9;">How long do you want to keep the data?</h5>
+        <div class="time_conteiner">
+            <input type="text" id="time" placeholder="Enter time">
+            <select style="background-color: #00ff2f;color: #ffffff;border: none;" id="selectTimemer">
+                <option value="1">hour</option>
+                <option value="24">day</option>
+            </select>
+        </div>
+        <h5 style="margin: 0;text-align: center;" id="abcabc"></h5>
+        <button onclick="signupbutton()">signup</button>
+    </form>
+
+    <script src="scripts/signup.js"></script>
+</body>
+</html>
