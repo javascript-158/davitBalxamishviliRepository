@@ -29,23 +29,3 @@ function buttonLogin() {
         }
     }
 }
-
-function sddsfsdfsdf() {
-    let usersData = [
-        {
-            firstname: "tato",
-            lastName: "ipsumishvili",
-            location: "dfsd",
-            username: "tv7574",
-            password: "akvk"
-        },
-        {
-            firstname: "jojo",
-            lastName: "atavia",
-            location: "fgfgngfdc",
-            username: "ckjdjkd",
-            password: "@@@@@@@@@@@@@"
-        }
-    ]
-    localStorage.setItem("usersData", JSON.stringify(usersData));
-}

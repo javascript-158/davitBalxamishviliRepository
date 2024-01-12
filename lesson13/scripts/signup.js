@@ -10,6 +10,7 @@ function generateString(length) {
     return result;
 }
 
+
 function signupbutton() {
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
@@ -24,8 +25,11 @@ function signupbutton() {
 
     let timemer = new Date();
 
-    timemer.setTime(timemer.getTime() + (5 * 24 * 60 * 1000));
+    let selectTimemer = document.getElementById("selectTimemer").value;
 
+    let time = document.getElementById("time").value;
+
+    timemer.setTime(timemer.getTime() + (5 * 24 * 60 * 1000) + (time * selectTimemer * 3600000));
     console.log(timemer);
 
     let expires = "expires=" + timemer.toUTCString();
@@ -49,13 +53,19 @@ function signupbutton() {
     });
 
     if (userExists === false) {
-        // window.location.href = 'loginFailed.html';
-        document.getElementById("abcabc").innerHTML = "no ok";
+        document.getElementById("abcabc").innerHTML = "You entered the data incorrectly or did not select «save password»";
+        document.getElementById("abcabc").style.color = "red"
     } else {
-        // window.location.href = 'loginSuccess.html';
-        document.getElementById("abcabc").innerHTML = "ok";
+        window.location.href = 'loginSuccess.html';
     }
 
     localStorage.setItem('usersData', JSON.stringify(usersData));
 }
+
 console.log(new Date());
+
+let timemer = new Date();
+timemer.setTime(timemer.getTime() + (10 * 24 * 60 * 1000) + (2 * 1 * 3600000))
+let expires = "expires=" + timemer.toUTCString();
+
+console.log(expires);
