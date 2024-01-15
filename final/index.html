@@ -11,28 +11,30 @@
 </head>
 
 <body>
-    <div id="backgroundLogin" class="backgroundLogin">
-    <div id="loginWindow" class="login_window">
-        <button class="x"><i class="fa-solid fa-xmark"></i></button>
-    </div>
+    <div id="backgroundLogin">
+        <div id="loginWindow">
+        </div>
     </div>
     <div class="container">
         <header>
-            <nav>
-                <a href="index.html"><h1>forum</h1></a>
-            <div class="">
-                <button onclick="LoginButton()">Login in</button>
-            </div>
+            <nav class="header_nav">
+                <a href="index.html" class="logo">
+                    <h1>forum</h1>
+                </a>
+                <div class="">
+                    <button onclick="LoginButton()">sign in</button>
+                    <button onclick="LoginButton()">sign up</button>
+                </div>
             </nav>
         </header>
         <aside>
-            <nav>
-                <span class="aside_span main">
-                    <a href="index.html" class="mainTxt">Home</a>
-                </span>
-                <span class="aside_span">
-                    <a href="About-us.html" class="mainTxt">About us</a>
-                </span>
+            <nav class="aside_nav">
+                <a href="index.html" class="mainTxt main">
+                    <h2>Home</h2>
+                </a>
+                <a href="About-us.html" class="mainTxt">
+                    <h2>About us</h2>
+                </a>
             </nav>
 
         </aside>
