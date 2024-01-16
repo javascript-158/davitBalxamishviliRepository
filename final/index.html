@@ -4,30 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>forum</title>
+    <title>syfai</title>
     <link rel="stylesheet" href="css/reset.css">
     <script src="https://kit.fontawesome.com/e77ac3a5f0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div id="backgroundLogin">
-        <div id="loginWindow">
+    <div id="backgroundLogin" onclick="xmark()" class="backgroundLogin">
+        <div id="loginWindow" class="login_window">
+            <h1 class="sign_up_h1">New to syfai?</h1>
+            <button class="x" onclick="xmark()"><i class="fa-solid fa-xmark"></i></button>
+            <form class="login_window_form">
+                <input type="text">
+                <input type="text">
+            </form>
         </div>
     </div>
+
+
     <div class="container">
         <header>
             <nav class="header_nav">
                 <a href="index.html" class="logo">
-                    <h1>forum</h1>
+                    <h1>syfai</h1>
                 </a>
                 <div class="">
-                    <button onclick="LoginButton()">sign in</button>
-                    <button onclick="LoginButton()">sign up</button>
+                    <button class="sign" onclick="LoginButton()">Log in</button>
+                    <button class="sign" onclick="LoginButton()">sign up</button>
                 </div>
             </nav>
         </header>
         <aside>
+            <h1 class="mainTxt2">main board</h1>
             <nav class="aside_nav">
                 <a href="index.html" class="mainTxt main">
                     <h2>Home</h2>
@@ -36,9 +45,11 @@
                     <h2>About us</h2>
                 </a>
             </nav>
-
         </aside>
 
+        <section class="section1 sec1">
+            <h1 class="Popular_Threads"><span></span>Popular Threads<a href="" class="Popular_Threads_Show_more">Show more <i class="fa-solid fa-arrow-right"></i></a></h1>
+        </section>
     </div>
     <script src="scripts/script.js"></script>
 </body>

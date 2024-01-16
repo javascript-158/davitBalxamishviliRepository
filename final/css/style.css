@@ -1,5 +1,5 @@
 :root {
-    --background-color: #1f2460;
+    --background_color: #1f2460;
     --wite: #d5dbff;
     --Transparent_wite: #d5dbff7b;
     --more_black: #000431;
@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--background_color);
 }
 
 .backgroundLogin {
@@ -19,7 +19,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .login_window {
@@ -33,6 +32,14 @@ body {
     grid-template-rows: 1fr 15fr;
     grid-column-gap: 40px;
     grid-row-gap: 15px;
+}
+
+.sign_up_h1 {
+    margin: auto;
+    padding-left: 50px;
+    grid-area: 1 / 1 / 2 / 2;
+    font-size: 28px;
+    font-weight: 900;
 }
 
 .x {
@@ -52,7 +59,8 @@ body {
 .container {
     max-width: 1440px;
     width: 100%;
-    height: 2000px;
+    max-height: 2000px;
+    height: 100%;
     margin: auto;
     padding-top: 40px;
     display: grid;
@@ -68,9 +76,6 @@ header,
     width: inherit;
     height: 40px;
     padding: 0 18px 0 18px;
-    background-color: var(--background-color);
-    border-bottom: solid 3px;
-    border-color: linear-gradient(to right, red, purple) ;
     position: fixed;
     top: 0;
     left: 50%;
@@ -80,8 +85,25 @@ header,
     justify-content: space-between;
 }
 
+.header_nav {
+    background: linear-gradient(var(--background_color), var(--background_color)) padding-box, linear-gradient(90deg, var(--background_color), var(--wite), var(--background_color)) border-box;
+    border-width: 0 0 3px 0;
+    border-style: solid;
+    border-color: transparent;
+}
+
 .logo {
     font-size: 30px;
+    color: var(--wite);
+}
+
+.sign {
+    padding: 4px 8px;
+    background: linear-gradient(var(--background_color), var(--background_color)) padding-box, linear-gradient(-50deg, var(--black), #092d80, #721cbd) border-box;
+    border-width: 3px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 30px;
     color: var(--wite);
 }
 
@@ -109,7 +131,7 @@ aside {
 .aside_nav {
     padding: 30px 8px 25px 4px;
     width: 100%;
-    max-width: 288px;
+    max-width: 280px;
     width: 19.5%;
     display: flex;
     flex-direction: column;
@@ -128,10 +150,13 @@ aside {
 }
 
 .main {
-    border-bottom: #d5dbff solid 2px;
+    background: linear-gradient(var(--black), var(--black)) padding-box, linear-gradient(90deg, var(--wite), var(--background_color)) border-box;
+    border-width: 0 0 3px 0;
+    border-style: solid;
+    border-color: transparent;
 }
 
-.About_us_section1 {
+.section1 {
     margin-top: 20px;
     grid-area: 1 / 2 / 2 / 3;
     display: flex;
@@ -142,6 +167,30 @@ aside {
     border: var(--Transparent_wite) solid 2px;
     border-radius: 8px;
     padding: 60px;
+    margin-bottom: 60px;
+}
+
+.sec1 {
+    padding: 0 0 60px;
+}
+
+.Popular_Threads {
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    background-color: var(--more_black);
+    color: var(--wite);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.4em 0.4em 0 0;
+}
+
+.Popular_Threads_Show_more {
+    margin-right: 8px;
+    color: var(--wite);
+    font-size: 15px;
 }
 
 .hello {
