@@ -16,14 +16,15 @@ body {
     width: 100%;
     height: 100%;
     background-color: #00000086;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
 .login_window {
     z-index: 2;
-    position: relative;
+    margin: auto;
+    position: fixed;
     width: 30%;
     height: 300px;
     background-color: white;

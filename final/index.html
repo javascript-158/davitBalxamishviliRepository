@@ -11,16 +11,20 @@
 </head>
 
 <body>
-    <div id="backgroundLogin" onclick="xmark()" class="backgroundLogin">
+    <div id="backgroundLogin" class="backgroundLogin">
         <div id="loginWindow" class="login_window">
             <h1 class="sign_up_h1">New to syfai?</h1>
             <button class="x" onclick="xmark()"><i class="fa-solid fa-xmark"></i></button>
-            <form class="login_window_form">
-                <input type="text">
-                <input type="text">
-            </form>
+            <div class="login_window_form">
+                <input type="email" id="email" placeholder="email">
+                <input type="text" id="username" placeholder="username">
+                <input type="password" id="password" placeholder="password">
+                <button onclick="handleRegistration()">Dan</button>
+                <p id="error"></p>
+            </div>
         </div>
     </div>
+
 
 
     <div class="container">
@@ -30,6 +34,7 @@
                     <h1>syfai</h1>
                 </a>
                 <div class="">
+                    <button class="sign" onclick="createAccaunt()">random acaunt</button>
                     <button class="sign" onclick="LoginButton()">Log in</button>
                     <button class="sign" onclick="LoginButton()">sign up</button>
                 </div>
