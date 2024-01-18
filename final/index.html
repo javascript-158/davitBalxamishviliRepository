@@ -25,6 +25,23 @@
         </div>
     </div>
 
+    <div id="backgroundLogin2" class="backgroundLogin2">
+        <div id="loginWindow2" class="login_window2">
+            <h1 class="sign_up_h1">Already have syfai? </h1>
+            <button class="x" onclick="xmark2()"><i class="fa-solid fa-xmark"></i></button>
+            <form id="loginWindowForm" class="login_window_form">
+                <input type="text" id="username2" placeholder="username">
+                <input type="password" id="password2" placeholder="password">
+                <div>
+                    <input id="savePassword" type="checkbox">
+                    <span>Save password</span>
+                </div>
+                <button onclick="handleRegistration2()">Dan</button>
+                <p id="error2"></p>
+            </form>
+        </div>
+    </div>
+
 
 
     <div class="container">
@@ -34,9 +51,8 @@
                     <h1>syfai</h1>
                 </a>
                 <div class="">
-                    <button class="sign" onclick="createAccaunt()">random acaunt</button>
                     <button class="sign" onclick="LoginButton()">Log in</button>
-                    <button class="sign" onclick="LoginButton()">sign up</button>
+                    <button class="sign" onclick="signupButton()">sign up</button>
                 </div>
             </nav>
         </header>
@@ -53,7 +69,8 @@
         </aside>
 
         <section class="section1 sec1">
-            <h1 class="Popular_Threads"><span></span>Popular Threads<a href="" class="Popular_Threads_Show_more">Show more <i class="fa-solid fa-arrow-right"></i></a></h1>
+            <h1 class="Popular_Threads"><span></span>Popular Threads<a href="" class="Popular_Threads_Show_more">Show
+                    more <i class="fa-solid fa-arrow-right"></i></a></h1>
         </section>
     </div>
     <script src="scripts/script.js"></script>

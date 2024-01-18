@@ -10,7 +10,8 @@ body {
     background-color: var(--background_color);
 }
 
-.backgroundLogin {
+.backgroundLogin,
+.backgroundLogin2 {
     z-index: 1;
     position: absolute;
     width: 100%;
@@ -21,12 +22,12 @@ body {
     align-items: center;
 }
 
-.login_window {
+.login_window, .login_window2 {
     z-index: 2;
     margin: auto;
     position: fixed;
-    width: 30%;
-    height: 300px;
+    width: 370px;
+    height: 500px;
     background-color: white;
     display: grid;
     grid-template-columns: 23fr 1fr;
