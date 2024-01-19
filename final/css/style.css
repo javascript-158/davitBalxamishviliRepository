@@ -4,6 +4,7 @@
     --Transparent_wite: #d5dbff7b;
     --more_black: #000431;
     --black: #000751;
+    --background_orange: #342304;
 }
 
 body {
@@ -33,29 +34,78 @@ body {
     grid-template-columns: 23fr 1fr;
     grid-template-rows: 1fr 15fr;
     grid-column-gap: 40px;
-    grid-row-gap: 15px;
+    grid-row-gap: 45px;
 }
 
 .sign_up_h1 {
+    margin-top: 14px;
     margin: auto;
     padding-left: 50px;
     grid-area: 1 / 1 / 2 / 2;
-    font-size: 28px;
+    font-size: 38px;
     font-weight: 900;
 }
 
 .x {
     margin-top: 8px;
     margin-right: 8px;
+    font-size: 20px;
+    border-radius: 100%;
+    padding: 0 8px;
+    background-color: white;
+    border: none;
     cursor: pointer;
     grid-area: 1 / 2 / 2 / 3;
 }
 
+.x:hover {
+    background-color: #d6d6d6;
+}
+
 .login_window_form {
     grid-area: 2 / 1 / 6 / 3;
+    width: 70%;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 60px 0;
+    gap: 30px 0;
+}
+
+.label_p {
+    color: red;
+    margin-left: 10px;
+    display: none;
+}
+
+.form_a {
+    color: #0091ff;
+}
+
+.form_a:hover {
+    color: #00508d;
+}
+
+.sign_up_input {
+    width: 100%;
+    padding: 15px 8px;
+    margin-top: 5px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: var(--wite);
+}
+
+.checkbox {
+    accent-color: #0091ff;
+}
+
+.inputError {
+    width: 100%;
+    outline: none;
+    padding: 15px 8px;
+    border-radius: 20px;
+    border: red solid 3px;
+    background-color: var(--wite);
 }
 
 .container {
@@ -100,13 +150,24 @@ header,
 }
 
 .sign {
-    padding: 4px 8px;
-    background: linear-gradient(var(--background_color), var(--background_color)) padding-box, linear-gradient(-50deg, var(--black), #092d80, #721cbd) border-box;
-    border-width: 3px;
-    border-style: solid;
-    border-color: transparent;
+    padding: 6px 14px;
+    background-color: orange;
+    font-size: 15px;
+    font-weight: 800;
     border-radius: 30px;
-    color: var(--wite);
+    color: #342304;
+    border: none;
+    cursor: pointer;
+}
+
+.sign:active {
+    background-color: #855600;
+}
+
+.sign1 {
+    width: 60%;
+    margin: 60px auto;
+    padding: 10px 14px;
 }
 
 aside {
@@ -174,6 +235,7 @@ aside {
 
 .sec1 {
     padding: 0 0 60px;
+    align-items: start;
 }
 
 .Popular_Threads {
@@ -200,6 +262,11 @@ aside {
     font-size: 30px;
     margin-bottom: 20px;
     font-weight: 600;
+}
+
+.user {
+    font-size: 25px;
+    margin: 20px 0 0 20px;
 }
 
 .ipsum {

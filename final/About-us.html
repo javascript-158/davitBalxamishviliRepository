@@ -11,8 +11,34 @@
 </head>
 
 <body>
-    <div id="backgroundLogin">
-        <div id="loginWindow">
+    <div id="backgroundLogin" class="backgroundLogin">
+        <div id="loginWindow" class="login_window">
+            <h1 class="sign_up_h1">New to syfai?</h1>
+            <button class="x" onclick="xmark()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="login_window_form">
+                <input type="email" id="email" placeholder="email">
+                <input type="text" id="username" placeholder="username">
+                <input type="password" id="password" placeholder="password">
+                <button onclick="handleRegistration()">Dan</button>
+                <p id="error"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="backgroundLogin2" class="backgroundLogin2">
+        <div id="loginWindow2" class="login_window2">
+            <h1 class="sign_up_h1">Already have syfai? </h1>
+            <button class="x" onclick="xmark2()"><i class="fa-solid fa-xmark"></i></button>
+            <form id="loginWindowForm" class="login_window_form">
+                <input type="text" id="username2" placeholder="username">
+                <input type="password" id="password2" placeholder="password">
+                <div>
+                    <input id="savePassword" type="checkbox">
+                    <span>Save password</span>
+                </div>
+                <button onclick="handleRegistration2()">Dan</button>
+                <p id="error2"></p>
+            </form>
         </div>
     </div>
     <div class="container">
@@ -21,9 +47,9 @@
                 <a href="index.html" class="logo">
                     <h1>syfai</h1>
                 </a>
-                <div class="">
+                <div>
                     <button class="sign" onclick="LoginButton()">Log in</button>
-                    <button class="sign" onclick="LoginButton()">sign up</button>
+                    <button class="sign" onclick="signupButton()">sign up</button>
                 </div>
             </nav>
         </header>
@@ -33,6 +59,9 @@
             <nav class="aside_nav">
                 <a href="index.html" class="mainTxt">
                     <h2>Home</h2>
+                </a>
+                <a href="profile.html" class="mainTxt">
+                    <h2>profile</h2>
                 </a>
                 <a href="About-us.html" class="mainTxt main">
                     <h2>About us</h2>
