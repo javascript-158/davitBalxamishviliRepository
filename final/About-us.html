@@ -13,13 +13,23 @@
 <body>
     <div id="backgroundLogin" class="backgroundLogin">
         <div id="loginWindow" class="login_window">
-            <h1 class="sign_up_h1">New to syfai?</h1>
+            <h1 class="sign_up_h1">sign up</h1>
             <button class="x" onclick="xmark()"><i class="fa-solid fa-xmark"></i></button>
             <div class="login_window_form">
-                <input type="email" id="email" placeholder="email">
-                <input type="text" id="username" placeholder="username">
-                <input type="password" id="password" placeholder="password">
-                <button onclick="handleRegistration()">Dan</button>
+                <div style="width: 100%;height: 100%;">
+                    <input type="email" class="sign_up_input" id="email" placeholder="email">
+                    <p id="labelEmail" class="label_p">Email is oncorrreect</p>
+                </div>
+                <div style="width: 100%;height: 100%;">
+                    <input type="text" class="sign_up_input" id="username" placeholder="username">
+                    <p id="labelUsername" class="label_p">Username is oncorrreect</p>
+                </div>
+                <div style="width: 100%;height: 100%;">
+                    <input type="password" class="sign_up_input" id="password" placeholder="password">
+                    <p id="labelPassword" class="label_p">Password is oncorrreect</p>
+                </div>
+                <h3 style="margin-bottom: -25px;font-weight: 500;">Already have syfai?: <a href="#" class="form_a" onclick="LoginButton()">Log in</a></h3>
+                <button class="sign sign1" onclick="handleRegistration()">Next</button>
                 <p id="error"></p>
             </div>
         </div>
@@ -27,20 +37,28 @@
 
     <div id="backgroundLogin2" class="backgroundLogin2">
         <div id="loginWindow2" class="login_window2">
-            <h1 class="sign_up_h1">Already have syfai? </h1>
+            <h1 class="sign_up_h1">Log in </h1>
             <button class="x" onclick="xmark2()"><i class="fa-solid fa-xmark"></i></button>
             <form id="loginWindowForm" class="login_window_form">
-                <input type="text" id="username2" placeholder="username">
-                <input type="password" id="password2" placeholder="password">
+                <div style="width: 100%;height: 100%;">
+                    <input type="text" class="sign_up_input" id="username2" placeholder="username">
+                    <p id="labelUsername" class="label_p">Username is oncorrreect</p>
+                </div>
+                <div style="width: 100%;height: 100%;">
+                    <input type="password" class="sign_up_input" id="password2" placeholder="password">
+                    <p id="labelPassword" class="label_p">Password is oncorrreect</p>
+                </div>
                 <div>
-                    <input id="savePassword" type="checkbox">
+                    <input id="savePassword" class="checkbox" type="checkbox">
                     <span>Save password</span>
                 </div>
-                <button onclick="handleRegistration2()">Dan</button>
+                <h3 style="margin-bottom: -25px;font-weight: 500;">New to syfai?: <a href="#" class="form_a" onclick="signupButton()">sign up</a></h3>
+                <button class="sign sign1" onclick="handleRegistration2()">finish</button>
                 <p id="error2"></p>
             </form>
         </div>
     </div>
+
     <div class="container">
         <header>
             <nav class="header_nav">

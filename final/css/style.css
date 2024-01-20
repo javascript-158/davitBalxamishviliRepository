@@ -122,6 +122,10 @@ body {
     grid-row-gap: 0px;
 }
 
+.cont2 {
+    grid-column-gap: 0;
+}
+
 header,
 .header_nav {
     max-width: inherit;
@@ -233,9 +237,25 @@ aside {
     margin-bottom: 60px;
 }
 
-.sec1 {
+.user_container{
+    display: flex;
+    margin: 20px 0 0 20px;
+}
+
+.userimg {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: var(--wite);
+}
+
+.sec1, .sec2 {
     padding: 0 0 60px;
     align-items: start;
+}
+
+.sec2 {
+    margin-top: 0;
 }
 
 .Popular_Threads {

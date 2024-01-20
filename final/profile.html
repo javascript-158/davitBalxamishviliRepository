@@ -28,7 +28,8 @@
                     <input type="password" class="sign_up_input" id="password" placeholder="password">
                     <p id="labelPassword" class="label_p">Password is oncorrreect</p>
                 </div>
-                <h3 style="margin-bottom: -25px;font-weight: 500;">Already have syfai?: <a href="#" class="form_a" onclick="LoginButton()">Log in</a></h3>
+                <h3 style="margin-bottom: -25px;font-weight: 500;">Already have syfai?: <a href="#" class="form_a"
+                        onclick="LoginButton()">Log in</a></h3>
                 <button class="sign sign1" onclick="handleRegistration()">Next</button>
                 <p id="error"></p>
             </div>
@@ -41,18 +42,19 @@
             <button class="x" onclick="xmark2()"><i class="fa-solid fa-xmark"></i></button>
             <form id="loginWindowForm" class="login_window_form">
                 <div style="width: 100%;height: 100%;">
-                    <input type="text" class="sign_up_input" id="username" placeholder="username">
+                    <input type="text" class="sign_up_input" id="username2" placeholder="username">
                     <p id="labelUsername" class="label_p">Username is oncorrreect</p>
                 </div>
                 <div style="width: 100%;height: 100%;">
-                    <input type="password" class="sign_up_input" id="password" placeholder="password">
+                    <input type="password" class="sign_up_input" id="password2" placeholder="password">
                     <p id="labelPassword" class="label_p">Password is oncorrreect</p>
                 </div>
                 <div>
                     <input id="savePassword" class="checkbox" type="checkbox">
                     <span>Save password</span>
                 </div>
-                <h3 style="margin-bottom: -25px;font-weight: 500;">New to syfai?: <a href="#" class="form_a" onclick="signupButton()">sign up</a></h3>
+                <h3 style="margin-bottom: -25px;font-weight: 500;">New to syfai?: <a href="#" class="form_a"
+                        onclick="signupButton()">sign up</a></h3>
                 <button class="sign sign1" onclick="handleRegistration2()">finish</button>
                 <p id="error2"></p>
             </form>
@@ -60,7 +62,7 @@
     </div>
 
 
-    <div class="container">
+    <div class="container cont2">
         <header>
             <nav class="header_nav">
                 <a href="index.html" class="logo">
@@ -87,8 +89,13 @@
             </nav>
         </aside>
 
-        <section class="section1 sec1">
-            <h3 id="usernameProfile" class="hello user"></h3>
+        <section class="section1 sec2">
+            <div class="user_container">
+                <img src="" class="userimg" alt="">
+                <h3 id="usernameProfile" class="hello user"></h3>
+
+                <a href="upload.html"><button>upload</button></a>
+            </div>
         </section>
     </div>
     <script src="scripts/script.js"></script>

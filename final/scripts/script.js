@@ -139,7 +139,7 @@ function handleRegistration2() {
     let expires = "expires=" + timeNow.toUTCString();
     let sessionToken = generateString(36);
     console.log(expires);
-    //${expires};
+    
     for (let user = 0; user < usersData.length; user++) {
         if (usersData[user].username === username && usersData[user].password === password) {
             if (savePasswordIsChecked === true) {
@@ -198,8 +198,63 @@ if (sessionToken) {
     // }
     console.log(loggedInUserData)
 
-    usernameProfile.innerHTML = `${loggedInUserData.username}`;
+    // usernameProfile.innerHTML = `${loggedInUserData.username}`;
 
 } else {
     // resultText.innerHTML = "You need to be logged in to access this page!"
+}
+
+let pueueImagesArray = [],
+saveForm = document.querySelector("#saved-form"),
+queuedForm = document.querySelector("#queued-form"),
+savedDiv = document.querySelector(".saved-div"),
+queuedDiv = document.querySelector(".queued-div"),
+inputDiv = document.querySelector(".input-div"),
+input = document.querySelector(".input-div  input"),
+serverMasage = document.querySelector(".server-message"),
+deleteImages = [];
+
+// SAVED IN SEVER IMAGES
+
+// QUEUED IN FRONTEND IMAGES
+
+input.addEventListener("change", () => {
+    const files = input.files
+
+    for(let i = 0; i < files.length; i++) {
+        pueueImagesArray.push(files[i])
+    }
+    queuedForm.reset()
+    displayQueuedImages()
+})
+
+inputDiv.addEventListener("drop", (e) => {
+    e.preventDefault()
+    const files = e.dataTransfer.files
+    for(let i = 0; i < files.length; i++) {
+        if (!files[i].type.match("image")) continue
+
+        if(pueueImagesArray.every(image => image.name !== files[i].name))
+        pueueImagesArray.push(files[i])
+    }
+    displayQueuedImages()
+})
+
+function displayQueuedImages() {
+    let images = ""
+
+    pueueImagesArray.forEach((image, index) => {
+        images += `
+        <div class="image">
+            <img src="${URL.createObjectURL(image)}" alt="image">
+            <span onclick="deleteQueuedImage(${index})">&times;</span>
+        </div>
+        `
+    })
+    queuedDiv.innerHTML = images
+}
+
+function deleteQueuedImage(index){
+    pueueImagesArray.splice(index, 1)
+    displayQueuedImages()
 }
