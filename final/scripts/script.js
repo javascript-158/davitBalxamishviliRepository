@@ -139,7 +139,7 @@ function handleRegistration2() {
     let expires = "expires=" + timeNow.toUTCString();
     let sessionToken = generateString(36);
     console.log(expires);
-    
+
     for (let user = 0; user < usersData.length; user++) {
         if (usersData[user].username === username && usersData[user].password === password) {
             if (savePasswordIsChecked === true) {
@@ -169,7 +169,7 @@ function handleRegistration2() {
 let sessionToken = sessionStorage.getItem('sessionToken');
 let usersData = localStorage.getItem('usersData');
 usersData = JSON.parse(usersData);
-console.log(sessionToken)
+// console.log(sessionToken)
 let usernameProfile = document.getElementById('usernameProfile')
 
 let loggedInUserData = {};
@@ -187,7 +187,7 @@ if (sessionToken) {
     // resultText.innerHTML = "Login Success";
 
     for (let user of usersData) {
-        console.log(user.sessionToken, sessionToken)
+        // console.log(user.sessionToken, sessionToken)
         if (user.sessionToken === sessionToken) {
             loggedInUserData = user;
         }
@@ -196,65 +196,255 @@ if (sessionToken) {
     // if (Object.keys(loggedInUserData).length === 0) {
     //     window.location.href = 'loginFailed.html';
     // }
-    console.log(loggedInUserData)
+    console.log(loggedInUserData.email)
 
-    // usernameProfile.innerHTML = `${loggedInUserData.username}`;
+    usernameProfile.innerHTML = `${loggedInUserData.username}`;
+
 
 } else {
     // resultText.innerHTML = "You need to be logged in to access this page!"
 }
+// 7122787
+function randomAnime() {
+    let randomAnime = (Math.floor(Math.random() * 10));
 
-let pueueImagesArray = [],
-saveForm = document.querySelector("#saved-form"),
-queuedForm = document.querySelector("#queued-form"),
-savedDiv = document.querySelector(".saved-div"),
-queuedDiv = document.querySelector(".queued-div"),
-inputDiv = document.querySelector(".input-div"),
-input = document.querySelector(".input-div  input"),
-serverMasage = document.querySelector(".server-message"),
-deleteImages = [];
 
-// SAVED IN SEVER IMAGES
+    fetch(`https://kitsu.io/api/edge/anime?filter[categories]=adventure`, {
 
-// QUEUED IN FRONTEND IMAGES
+    }).then(response => response.json()).then(animeAPI => {
+        let userimg = document.getElementById('userimg');
+        console.log(animeAPI.data[randomAnime].attributes.posterImage.original)
 
-input.addEventListener("change", () => {
-    const files = input.files
-
-    for(let i = 0; i < files.length; i++) {
-        pueueImagesArray.push(files[i])
-    }
-    queuedForm.reset()
-    displayQueuedImages()
-})
-
-inputDiv.addEventListener("drop", (e) => {
-    e.preventDefault()
-    const files = e.dataTransfer.files
-    for(let i = 0; i < files.length; i++) {
-        if (!files[i].type.match("image")) continue
-
-        if(pueueImagesArray.every(image => image.name !== files[i].name))
-        pueueImagesArray.push(files[i])
-    }
-    displayQueuedImages()
-})
-
-function displayQueuedImages() {
-    let images = ""
-
-    pueueImagesArray.forEach((image, index) => {
-        images += `
-        <div class="image">
-            <img src="${URL.createObjectURL(image)}" alt="image">
-            <span onclick="deleteQueuedImage(${index})">&times;</span>
-        </div>
-        `
+        userimg.setAttribute("src", animeAPI.data[randomAnime].attributes.posterImage.original);
+        // userimg.innerHTML = `
+        // <img src="${animeAPI.media_asset.variants[3].url}" id="userimg" class="userimg" alt="anime images">`;
     })
-    queuedDiv.innerHTML = images
 }
 
-function deleteQueuedImage(index){
-    pueueImagesArray.splice(index, 1)
-    displayQueuedImages()
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let pueueImagesArray = [],
+//     saveForm = document.querySelector("#saved-form"),
+//     queuedForm = document.querySelector("#queued-form"),
+//     savedDiv = document.querySelector(".saved-div"),
+//     queuedDiv = document.querySelector(".queued-div"),
+//     inputDiv = document.querySelector(".input-div"),
+//     input = document.querySelector(".input-div  input"),
+//     serverMasage = document.querySelector(".server-message"),
+//     deleteImages = [];
+
+// // SAVED IN SEVER IMAGES
+
+// // QUEUED IN FRONTEND IMAGES
+
+// input.addEventListener("change", () => {
+//     const files = input.files
+
+//     for (let i = 0; i < files.length; i++) {
+//         pueueImagesArray.push(files[i])
+//     }
+//     queuedForm.reset()
+//     displayQueuedImages()
+// })
+
+// inputDiv.addEventListener("drop", (e) => {
+//     e.preventDefault()
+//     const files = e.dataTransfer.files
+//     for(let i = 0; i < files.length; i++) {
+//         if (!files[i].type.match("image")) continue
+
+//         if(pueueImagesArray.every(image => image.name !== files[i].name))
+//         pueueImagesArray.push(files[i])
+//     }
+//     displayQueuedImages()
+// })
+
+
+// console.log(usersData)
+
+// function displayQueuedImages() {
+//     // let usersData = localStorage.getItem('usersData');
+//     // usersData = JSON.parse(usersData);
+
+//     let images = ""
+
+//     pueueImagesArray.forEach((image, index) => {
+//         images += `
+//         <div class="image">
+//             <img src="${URL.createObjectURL(image)}" class="userimg" alt="image">
+//             <span onclick="deleteQueuedImage(${index})">&times;</span>
+//         </div>
+//         `
+//     })
+//     queuedDiv.innerHTML = images
+
+//     loggedInUserData.images = images
+// }
+
+// email: "balxamishvilidavit40@gmail.com"
+// password: "gptuuu"
+// sessionToken: "LHOpTkwSW5SPqSrVvrEdiFyi1JenDuTLziv4"
+// username: "Datan700"
+
+
+
+// function Upload() {
+//     let UsersData = localStorage.getItem('usersData');
+//     UsersData = JSON.parse(UsersData);
+//     console.log(UsersData)
+
+//     let userimg = {
+//         email: email,
+//         username: username,
+//         password: password
+//     }
+
+//     // localStorage.setItem('usersData', JSON.stringify(usersData));
+// }
+
+// function deleteQueuedImage(index) {
+//     pueueImagesArray.splice(index, 1)
+//     displayQueuedImages()
+// }
+
+// queuedForm.addEventListener("submit", (e) => {
+//     e.preventDefault()
+//     sendQueuedImagesToServer()
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function sendQueuedImagesToServer() {
+// const formData = new FormData(queuedForm)
+
+// pueueImagesArray.forEach((image, index) => {
+//     formData.append(`file[${index}]`, image)
+// })
+
+//     fetch("upload", {
+//         method: "POST",
+//         body : formData
+//     })
+
+//     .then(response => {
+//         if (response.status !== 200) throw Error(response.statusText)
+//         location.reload()
+//     })
+
+//     .catch(error => {
+//         serverMasage.innerHTML = error
+//         serverMasage.style.cssText = "background-color: #ea5050; color: red;"
+//     })
+// }
+
