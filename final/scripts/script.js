@@ -31,6 +31,7 @@ function handleRegistration() {
     let user = {
         email: email,
         username: username,
+        images: '',
         password: password
     }
 
@@ -205,6 +206,9 @@ if (sessionToken) {
     // resultText.innerHTML = "You need to be logged in to access this page!"
 }
 // 7122787
+let userimg = document.getElementById('userimg');
+let userimg2 = document.getElementById('userimg').src;
+
 function randomAnime() {
     let randomAnime = (Math.floor(Math.random() * 10));
 
@@ -212,13 +216,105 @@ function randomAnime() {
     fetch(`https://kitsu.io/api/edge/anime?filter[categories]=adventure`, {
 
     }).then(response => response.json()).then(animeAPI => {
+        // let userimg = document.getElementById('userimg');
+
+
+
+        loggedInUserData.images = animeAPI.data[randomAnime].attributes.posterImage.original;
+
+        
+
+        // userimg.setAttribute("src", animeAPI.data[randomAnime].attributes.posterImage.original);
+        userimg.setAttribute("src", loggedInUserData.images);
+    })
+
+}
+
+console.log(loggedInUserData.images);
+
+// guram
+
+userimg.setAttribute("src", loggedInUserData.images);
+
+function randomDog() {
+    fetch(`https://random.dog/woof.json`, {
+
+    }).then(response => response.json()).then(randomDog => {
+
+
+        userimg.setAttribute("src", randomDog.url);
+    })
+}
+
+function bbbb() {
+    let buttons = document.getElementById("randomButtons");
+    let buttons2 = document.getElementById("randomButtons2");
+    let buttons3 = document.getElementById("randomButtons3");
+    let buttons4 = document.getElementById("randomButtons4");
+    let Show = document.getElementById("Show");
+
+    buttons.style.display = "block"
+    buttons2.style.display = "block"
+    buttons3.style.display = "block"
+    buttons4.style.display = "block"
+    Show.style.display = "none"
+}
+
+function dddd() {
+    let buttons = document.getElementById("randomButtons");
+    let buttons2 = document.getElementById("randomButtons2");
+    let buttons3 = document.getElementById("randomButtons3");
+    let buttons4 = document.getElementById("randomButtons4");
+    let Show = document.getElementById("Show");
+
+    buttons.style.display = "none"
+    buttons2.style.display = "none"
+    buttons3.style.display = "none"
+    buttons4.style.display = "none"
+    Show.style.display = "block"
+}
+
+function posts() {
+    let postsText = document.createElement('div');
+    let postsDiv = document.getElementById('postsDiv');
+
+    let postsInput = document.getElementById('postsInput').value;
+
+    let postsData = localStorage.getItem('postsData');
+    postsData = JSON.parse(postsData);
+
+    let post = {
+        postsText: postsText,
+        username: loggedInUserData.username,
+        text: postsInput
+    }
+    console.log(post.postsText);
+    post.postsText.innerHTML = `
+    <div>
+    <div class="user_container">
+        <img src="${userimg}" id="userimg" class="userimg" alt="">
+        <h3 id="usernameProfile" class="hello user">${post.username}</h3>
+    </div>
+    <p class="hello post_text">${postsInput}</p>
+    </div>
+    `
+
+    postsDiv.appendChild(postsText);
+    postsData.push(post);
+    localStorage.setItem('postsData', JSON.stringify(postsData));
+}
+
+function Saved() {
+    let randomAnime = (Math.floor(Math.random() * 10));
+
+    fetch(`https://kitsu.io/api/edge/anime?filter[categories]=adventure`, {
+
+    }).then(response => response.json()).then(animeAPI => {
         let userimg = document.getElementById('userimg');
-        console.log(animeAPI.data[randomAnime].attributes.posterImage.original)
 
         userimg.setAttribute("src", animeAPI.data[randomAnime].attributes.posterImage.original);
-        // userimg.innerHTML = `
-        // <img src="${animeAPI.media_asset.variants[3].url}" id="userimg" class="userimg" alt="anime images">`;
     })
+
 }
 
 
