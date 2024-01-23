@@ -13,8 +13,8 @@ body {
 
 .backgroundLogin,
 .backgroundLogin2 {
-    z-index: 1;
-    position: absolute;
+    z-index: 2;
+    position: fixed;
     width: 100%;
     height: 100%;
     background-color: #00000086;
@@ -23,8 +23,9 @@ body {
     align-items: center;
 }
 
-.login_window, .login_window2 {
-    z-index: 2;
+.login_window,
+.login_window2 {
+    z-index: 3;
     margin: auto;
     position: fixed;
     width: 370px;
@@ -111,7 +112,6 @@ body {
 .container {
     max-width: 1440px;
     width: 100%;
-    max-height: 2000px;
     height: 100%;
     margin: auto;
     padding-top: 40px;
@@ -123,12 +123,115 @@ body {
 }
 
 .cont2 {
-    grid-template-rows:330px 1fr;
+    grid-template-rows: 330px 1fr;
     grid-column-gap: 0;
+}
+
+.cond_index {
+    grid-template-rows: 1fr .3fr 3fr;
+
+}
+
+.slider_images {
+    width: 60%;
+    height: 200px;
+    z-index: -1;
+}
+
+.dfsdf {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.slideshow-container {
+    grid-area: 1 / 2 / 2 / 3;
+    position: relative;
+}
+
+.myPictures {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.previous,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -25px;
+    padding: 18px;
+    color: red;
+    font-weight: bold;
+    font-size: 48px;
+    transition: 0.6s ease;
+    border-radius: 0 4px 4px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.previous:hover,
+.next:hover {
+    background-color: rgb(33, 31, 31);
+}
+
+.pictureText {
+    color: rgb(163, 163, 49);
+    font-size: 16px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.textNumber {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 4px;
+    background-color: rgb(240, 134, 5);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: rgb(66, 41, 179);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.3
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 header,
 .header_nav {
+    z-index: 1;
     max-width: inherit;
     width: inherit;
     height: 40px;
@@ -179,7 +282,8 @@ aside {
     left: 0;
     height: 100%;
     background-color: var(--black);
-    grid-area: 1 / 1 / 3 / 2;
+    /* grid-area: 1 / 1 / 3 / 2; */
+    grid-area: 1 / 1 / 4 / 2;
     border-right: var(--Transparent_wite) solid 2px;
 }
 
@@ -226,7 +330,7 @@ aside {
 
 .section1 {
     margin-top: 20px;
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 2 / 1 / 3;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -238,7 +342,11 @@ aside {
     margin-bottom: 60px;
 }
 
-.user_container{
+.sec_index {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.user_container {
     display: flex;
     align-items: end;
     margin: 20px 0 0 20px;
@@ -260,7 +368,8 @@ aside {
     min-height: 500px;
 } */
 
-.sec1, .sec2 {
+.sec1,
+.sec2 {
     padding: 0 0 60px;
     align-items: start;
 }
@@ -314,7 +423,10 @@ aside {
     resize: none;
 }
 
-#randomButtons, #randomButtons2, #randomButtons3, #randomButtons4 {
+#randomButtons,
+#randomButtons2,
+#randomButtons3,
+#randomButtons4 {
     display: none;
 }
 

@@ -28,7 +28,8 @@
                     <input type="password" class="sign_up_input" id="password" placeholder="password">
                     <p id="labelPassword" class="label_p">Password is oncorrreect</p>
                 </div>
-                <h3 style="margin-bottom: -25px;font-weight: 500;">Already have syfai?: <a href="#" class="form_a" onclick="LoginButton()">Log in</a></h3>
+                <h3 style="margin-bottom: -25px;font-weight: 500;">Already have syfai?: <a href="#" class="form_a"
+                        onclick="LoginButton()">Log in</a></h3>
                 <button class="sign sign1" onclick="handleRegistration()">Next</button>
                 <p id="error"></p>
             </div>
@@ -52,7 +53,8 @@
                     <input id="savePassword" class="checkbox" type="checkbox">
                     <span>Save password</span>
                 </div>
-                <h3 style="margin-bottom: -25px;font-weight: 500;">New to syfai?: <a href="#" class="form_a" onclick="signupButton()">sign up</a></h3>
+                <h3 style="margin-bottom: -25px;font-weight: 500;">New to syfai?: <a href="#" class="form_a"
+                        onclick="signupButton()">sign up</a></h3>
                 <button class="sign sign1" onclick="handleRegistration2()">finish</button>
                 <p id="error2"></p>
             </form>
@@ -61,7 +63,7 @@
 
 
 
-    <div class="container">
+    <div class="container cond_index">
         <header>
             <nav class="header_nav">
                 <a href="index.html" class="logo">
@@ -73,6 +75,35 @@
                 </div>
             </nav>
         </header>
+
+        <div class="slideshow-container">
+
+            <div class="myPictures fade">
+                <!-- <div class="textNumber"> 1 / 3 </div> -->
+                <img src="https://www.coca-colacompany.com/content/dam/company/us/en/media-center/coca-cola-creations-y3000.png" class="slider_images">
+                <!-- <div class="pictureText">Beautiful landscape to visit</div> -->
+            </div>
+
+            <div class="myPictures fade">
+                <!-- <div class="textNumber"> 2 / 3 </div> -->
+                <img src="https://www.riotgames.com/darkroom/1200/6a7e2f26eaff2702dff1f1ac22e39980:46c225b597b09ea04b013847103fe1e9/221012-ccc-gaming2-0-kv-landscape-cmyk-preview.png" class="slider_images">
+                <!-- <div class="pictureText">Beautiful mountains to see</div> -->
+            </div>
+
+            <div class="myPictures fade">
+                <!-- <div class="textNumber"> 3 / 3 </div> -->
+                <img src="https://www.usatoday.com/gcdn/presto/2023/02/21/USAT/88877137-b922-4b19-b45d-513d9882f2cd-Move.png?crop=1019,574,x0,y0&width=1019&height=574&format=pjpg&auto=webp" class="slider_images">
+                <!-- <div class="pictureText">Beautiful lake to see</div> -->
+            </div>
+
+        </div>
+
+        <div class="dfsdf" style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
         <aside>
             <h1 class="mainTxt2">main board</h1>
             <nav class="aside_nav">
@@ -88,11 +119,41 @@
             </nav>
         </aside>
 
-        <section class="section1 sec1">
+        <section class="section1 sec1  sec_index">
             <h1 class="Popular_Threads"><span></span>Popular Threads<a href="" class="Popular_Threads_Show_more">Show
                     more <i class="fa-solid fa-arrow-right"></i></a></h1>
         </section>
     </div>
+    <script>
+        let slideIndex = 0;
+        autoSlider();
+        function autoSlider() {
+            setAttribute = null
+            let i;
+            let slides = document.getElementsByClassName("myPictures");
+            let dots = document.getElementsByClassName("dot");
+
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slideIndex = slideIndex + 1;
+
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            };
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "")
+            }
+
+            slides[slideIndex - 1].style.display = "flex";
+            dots[slideIndex - 1].className += " active";
+            // block
+            setTimeout(autoSlider, 2000); // ფუნქციის რეკურსიული გამოძახება
+        }
+    </script>
     <script src="scripts/script.js"></script>
 </body>
 

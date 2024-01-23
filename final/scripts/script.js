@@ -197,7 +197,6 @@ if (sessionToken) {
     // if (Object.keys(loggedInUserData).length === 0) {
     //     window.location.href = 'loginFailed.html';
     // }
-    console.log(loggedInUserData.email)
 
     usernameProfile.innerHTML = `${loggedInUserData.username}`;
 
@@ -205,7 +204,7 @@ if (sessionToken) {
 } else {
     // resultText.innerHTML = "You need to be logged in to access this page!"
 }
-// 7122787
+
 let userimg = document.getElementById('userimg');
 let userimg2 = document.getElementById('userimg').src;
 
@@ -216,23 +215,11 @@ function randomAnime() {
     fetch(`https://kitsu.io/api/edge/anime?filter[categories]=adventure`, {
 
     }).then(response => response.json()).then(animeAPI => {
-        // let userimg = document.getElementById('userimg');
 
-
-
-        loggedInUserData.images = animeAPI.data[randomAnime].attributes.posterImage.original;
-
-        
-
-        // userimg.setAttribute("src", animeAPI.data[randomAnime].attributes.posterImage.original);
-        userimg.setAttribute("src", loggedInUserData.images);
+        userimg.setAttribute("src", animeAPI.data[randomAnime].attributes.posterImage.original);
     })
 
 }
-
-console.log(loggedInUserData.images);
-
-// guram
 
 userimg.setAttribute("src", loggedInUserData.images);
 
@@ -274,273 +261,59 @@ function dddd() {
     Show.style.display = "block"
 }
 
+function Saved() {
+    let userimg = document.getElementById('userimg').src;
+
+    loggedInUserData.images = userimg;
+
+    console.log(loggedInUserData.images);
+
+    localStorage.setItem('usersData', JSON.stringify(usersData));
+}
+
+
+
 function posts() {
     let postsText = document.createElement('div');
     let postsDiv = document.getElementById('postsDiv');
-
     let postsInput = document.getElementById('postsInput').value;
-
     let postsData = localStorage.getItem('postsData');
     postsData = JSON.parse(postsData);
+
+
 
     let post = {
         postsText: postsText,
         username: loggedInUserData.username,
+        userimages: loggedInUserData.images,
         text: postsInput
     }
-    console.log(post.postsText);
+
+
     post.postsText.innerHTML = `
     <div>
     <div class="user_container">
-        <img src="${userimg}" id="userimg" class="userimg" alt="">
+        <img src="${loggedInUserData.images}" id="userimg" class="userimg" alt="">
         <h3 id="usernameProfile" class="hello user">${post.username}</h3>
     </div>
     <p class="hello post_text">${postsInput}</p>
     </div>
     `
 
-    postsDiv.appendChild(postsText);
+
+    postsDiv.appendChild(post.postsText);
     postsData.push(post);
     localStorage.setItem('postsData', JSON.stringify(postsData));
 }
+let postsData = localStorage.getItem('postsData');
+postsData = JSON.parse(postsData);
 
-function Saved() {
-    let randomAnime = (Math.floor(Math.random() * 10));
+let postSaved = {};
 
-    fetch(`https://kitsu.io/api/edge/anime?filter[categories]=adventure`, {
-
-    }).then(response => response.json()).then(animeAPI => {
-        let userimg = document.getElementById('userimg');
-
-        userimg.setAttribute("src", animeAPI.data[randomAnime].attributes.posterImage.original);
-    })
-
+for (let user of postsData) {
+    postSaved = user;
 }
 
+console.log(postSaved.text)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let pueueImagesArray = [],
-//     saveForm = document.querySelector("#saved-form"),
-//     queuedForm = document.querySelector("#queued-form"),
-//     savedDiv = document.querySelector(".saved-div"),
-//     queuedDiv = document.querySelector(".queued-div"),
-//     inputDiv = document.querySelector(".input-div"),
-//     input = document.querySelector(".input-div  input"),
-//     serverMasage = document.querySelector(".server-message"),
-//     deleteImages = [];
-
-// // SAVED IN SEVER IMAGES
-
-// // QUEUED IN FRONTEND IMAGES
-
-// input.addEventListener("change", () => {
-//     const files = input.files
-
-//     for (let i = 0; i < files.length; i++) {
-//         pueueImagesArray.push(files[i])
-//     }
-//     queuedForm.reset()
-//     displayQueuedImages()
-// })
-
-// inputDiv.addEventListener("drop", (e) => {
-//     e.preventDefault()
-//     const files = e.dataTransfer.files
-//     for(let i = 0; i < files.length; i++) {
-//         if (!files[i].type.match("image")) continue
-
-//         if(pueueImagesArray.every(image => image.name !== files[i].name))
-//         pueueImagesArray.push(files[i])
-//     }
-//     displayQueuedImages()
-// })
-
-
-// console.log(usersData)
-
-// function displayQueuedImages() {
-//     // let usersData = localStorage.getItem('usersData');
-//     // usersData = JSON.parse(usersData);
-
-//     let images = ""
-
-//     pueueImagesArray.forEach((image, index) => {
-//         images += `
-//         <div class="image">
-//             <img src="${URL.createObjectURL(image)}" class="userimg" alt="image">
-//             <span onclick="deleteQueuedImage(${index})">&times;</span>
-//         </div>
-//         `
-//     })
-//     queuedDiv.innerHTML = images
-
-//     loggedInUserData.images = images
-// }
-
-// email: "balxamishvilidavit40@gmail.com"
-// password: "gptuuu"
-// sessionToken: "LHOpTkwSW5SPqSrVvrEdiFyi1JenDuTLziv4"
-// username: "Datan700"
-
-
-
-// function Upload() {
-//     let UsersData = localStorage.getItem('usersData');
-//     UsersData = JSON.parse(UsersData);
-//     console.log(UsersData)
-
-//     let userimg = {
-//         email: email,
-//         username: username,
-//         password: password
-//     }
-
-//     // localStorage.setItem('usersData', JSON.stringify(usersData));
-// }
-
-// function deleteQueuedImage(index) {
-//     pueueImagesArray.splice(index, 1)
-//     displayQueuedImages()
-// }
-
-// queuedForm.addEventListener("submit", (e) => {
-//     e.preventDefault()
-//     sendQueuedImagesToServer()
-// })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function sendQueuedImagesToServer() {
-// const formData = new FormData(queuedForm)
-
-// pueueImagesArray.forEach((image, index) => {
-//     formData.append(`file[${index}]`, image)
-// })
-
-//     fetch("upload", {
-//         method: "POST",
-//         body : formData
-//     })
-
-//     .then(response => {
-//         if (response.status !== 200) throw Error(response.statusText)
-//         location.reload()
-//     })
-
-//     .catch(error => {
-//         serverMasage.innerHTML = error
-//         serverMasage.style.cssText = "background-color: #ea5050; color: red;"
-//     })
-// }
-
+postsDiv.appendChild(loggedInUserData.postsText);
