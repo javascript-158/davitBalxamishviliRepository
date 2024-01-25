@@ -1,7 +1,7 @@
 window.onscroll = function () { myFunction() };
 
 function myFunction() {
-    if (document.documentElement.scrollTop > 1450) {
+    if (document.documentElement.scrollTop > 1400) {
         document.getElementById("ipsum1").className = "ipsum_demo";
         document.getElementById("ipsum2").className = "ipsum dolor";
     } else {
@@ -9,7 +9,7 @@ function myFunction() {
         document.getElementById("ipsum2").className = "Lorem2";
     }
 
-    if (document.documentElement.scrollTop > 3050) {
+    if (document.documentElement.scrollTop > 3060) {
         document.getElementById("Creator").className = "Creator2";
         document.getElementById("CreatorDiv").className = "Creator_div";
         document.getElementById("CreatorP").className = "Creator_p";

@@ -1,14 +1,18 @@
 function signupButton() {
     backgroundLogin.style.display = "flex";
     backgroundLogin2.style.display = "none";
+    backgroundLogin3.style.display = "none";
 }
 let backgroundLogin = document.getElementById("backgroundLogin");
+let backgroundLogin3 = document.getElementById('backgroundLogin3');
 
 window.onclick = function (event) {
     if (event.target == backgroundLogin) {
         backgroundLogin.style.display = "none";
     } else if ((event.target == backgroundLogin2)) {
         backgroundLogin2.style.display = "none";
+    } else if ((event.target == backgroundLogin3)) {
+        backgroundLogin3.style.display = "none";
     }
 }
 
@@ -102,11 +106,13 @@ function handleRegistration() {
 function LoginButton() {
     backgroundLogin.style.display = "none";
     backgroundLogin2.style.display = "flex";
+    backgroundLogin3.style.display = "none";
 }
 let backgroundLogin2 = document.getElementById("backgroundLogin2");
 
 function xmark2() {
     backgroundLogin2.style.display = "none";
+    backgroundLogin3.style.display = "none";
 }
 
 const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -283,25 +289,28 @@ function posts() {
 
 
     let post = {
-        postsText: postsText,
         username: loggedInUserData.username,
         userimages: loggedInUserData.images,
         text: postsInput
     }
 
+    for (let user of postsData) {
+        postSaved = user;
+    }
 
-    post.postsText.innerHTML = `
+
+    postsText.innerHTML = `
     <div>
     <div class="user_container">
-        <img src="${loggedInUserData.images}" id="userimg" class="userimg" alt="">
+        <img src="${post.userimages}" id="userimg" class="userimg" alt="">
         <h3 id="usernameProfile" class="hello user">${post.username}</h3>
     </div>
-    <p class="hello post_text">${postsInput}</p>
+    <p class="hello post_text">${post.text}</p>
     </div>
     `
 
-
-    postsDiv.appendChild(post.postsText);
+    console.log(postsText)
+    postsDiv.appendChild(postsText);
     postsData.push(post);
     localStorage.setItem('postsData', JSON.stringify(postsData));
 }
@@ -316,4 +325,22 @@ for (let user of postsData) {
 
 console.log(postSaved.text)
 
-postsDiv.appendChild(loggedInUserData.postsText);
+
+let post = document.createElement('div');
+post.innerHTML = `
+<div>
+<div class="user_container">
+    <img src="${postSaved.userimages}" id="userimg" class="userimg" alt="">
+    <h3 id="usernameProfile" class="hello user">${postSaved.username}</h3>
+</div>
+<p class="hello post_text">${postSaved.text}</p>
+</div>
+`
+
+postsDiv.appendChild(post);
+
+
+function barsButton() {
+let backgroundLogin3 = document.getElementById('backgroundLogin3');
+backgroundLogin3.style.display = "block";
+}

@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/file.css">
     <title>syfai</title>
     <link rel="stylesheet" href="css/reset.css">
     <script src="https://kit.fontawesome.com/e77ac3a5f0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/laptops.css">
+    <link rel="stylesheet" href="css/tablets.css">
 </head>
 
 <body>
@@ -62,13 +63,36 @@
         </div>
     </div>
 
+    <div id="backgroundLogin3" class="backgroundLogin2">
+        <div id="loginWindow2" class="burger_window">
+            <button onclick="xmark2()" class="bars_button"><i class="fa-solid fa-xmark fa-xmark2"></i></button>
+            <nav class="aside_nav">
+                <a href="index.html" class="mainTxt">
+                    <h2>Home</h2>
+                </a>
+                <a href="profile.html" class="mainTxt main">
+                    <h2>profile</h2>
+                </a>
+                <a href="About-us.html" class="mainTxt">
+                    <h2>About us</h2>
+                </a>
+                <div style="display: flex;align-items: center;gap: 8px;">
+                    <button class="sign2" onclick="LoginButton()">Log in</button>
+                    <button class="sign2" onclick="signupButton()">sign up</button>
+                </div>
+            </nav>
+        </div>
+    </div>
 
     <div class="container cont2">
         <header>
             <nav class="header_nav">
-                <a href="index.html" class="logo">
-                    <h1>syfai</h1>
-                </a>
+                <div style="display: flex;gap: 8px;">
+                    <button onclick="barsButton()" class="bars_button"><i class="fa-solid fa-bars"></i></button>
+                    <a href="index.html" class="logo">
+                        <h1>syfai</h1>
+                    </a>
+                </div>
                 <div>
                     <button class="sign" onclick="LoginButton()">Log in</button>
                     <button class="sign" onclick="signupButton()">sign up</button>
@@ -76,8 +100,8 @@
             </nav>
         </header>
         <aside>
-            <h1 class="mainTxt2">main board</h1>
             <nav class="aside_nav">
+                <h1 class="mainTxt2">main board</h1>
                 <a href="index.html" class="mainTxt">
                     <h2>Home</h2>
                 </a>
@@ -100,27 +124,21 @@
                 <button onclick="randomDog()" id="randomButtons2" class="sign">Random dog</button>
                 <button onclick="Saved()" id="randomButtons4" class="sign">Saved</button>
 
-                <button onclick="dddd()" id="randomButtons3" class="sign">-</button>
-                <button onclick="bbbb()" id="Show" class="sign">+</button>
+                <button onclick="dddd()" id="randomButtons3" class="sign"><i
+                        class="fa-solid fa-angle-left"></i></button>
+                <button onclick="bbbb()" id="Show" class="sign"><i class="fa-solid fa-angle-right"></i></button>
             </div>
 
             <div class="post_container">
-                <!-- <input type="text" id="postsInput"> -->
                 <textarea id="postsInput"></textarea>
-            <button onclick="posts()" class="sign">posts</button>
+                <button onclick="posts()" class="sign">posts</button>
             </div>
 
         </section>
 
         <section class="section2">
             <div style="width: 80%;" class="posts_div" id="postsDiv">
-            <div>
-                <div class="user_container">
-                    <img src="" id="userimg" class="userimg" alt="">
-                    <h3 id="usernameProfile" class="hello user">guram</h3>
-                </div>
-                <p class="hello post_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quo praesentium harum voluptatem?</p>
-                </div>
+
             </div>
         </section>
     </div>

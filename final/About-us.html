@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <script src="https://kit.fontawesome.com/e77ac3a5f0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/laptops.css">
+    <link rel="stylesheet" href="css/tablets.css">
 </head>
 
 <body>
@@ -61,12 +63,36 @@
         </div>
     </div>
 
+    <div id="backgroundLogin3" class="backgroundLogin2">
+        <div id="loginWindow2" class="burger_window">
+            <button onclick="xmark2()" class="bars_button"><i class="fa-solid fa-xmark fa-xmark2"></i></button>
+            <nav class="aside_nav">
+                <a href="index.html" class="mainTxt">
+                    <h2>Home</h2>
+                </a>
+                <a href="profile.html" class="mainTxt">
+                    <h2>profile</h2>
+                </a>
+                <a href="About-us.html" class="mainTxt main">
+                    <h2>About us</h2>
+                </a>
+                <div style="display: flex;align-items: center;gap: 8px;">
+                    <button class="sign2" onclick="LoginButton()">Log in</button>
+                    <button class="sign2" onclick="signupButton()">sign up</button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
     <div class="container contUS">
         <header>
             <nav class="header_nav">
-                <a href="index.html" class="logo">
-                    <h1>syfai</h1>
-                </a>
+                <div style="display: flex;gap: 8px;">
+                    <button onclick="barsButton()" class="bars_button"><i class="fa-solid fa-bars"></i></button>
+                    <a href="index.html" class="logo">
+                        <h1>syfai</h1>
+                    </a>
+                </div>
                 <div>
                     <button class="sign" onclick="LoginButton()">Log in</button>
                     <button class="sign" onclick="signupButton()">sign up</button>
@@ -75,8 +101,8 @@
         </header>
 
         <aside>
-            <h1 class="mainTxt2">main board</h1>
             <nav class="aside_nav">
+                <h1 class="mainTxt2">main board</h1>
                 <a href="index.html" class="mainTxt">
                     <h2>Home</h2>
                 </a>
@@ -107,7 +133,8 @@
             <p class="Lorem" id="ipsum1">what you can do in syfai</p>
 
             <div class="Sponsors_div" id="SponsorsDiv">
-                <p class="ipsum dolor" id="ipsum2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore aliquam neque
+                <p class="ipsum dolor" id="ipsum2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+                    aliquam neque
                     sint ullam hic dolores, quia sed voluptas facere quasi pariatur modi, eius accusamus qui libero
                     harum? Optio, provident sit?
                     Quidem obcaecati minus iure, mollitia ex laboriosam adipisci ad quae ea aut libero eligendi,
@@ -123,13 +150,53 @@
         </section>
 
         <footer>
-            <div class="footer_div">
+            <div class="footer_div1">
                 <a href="index.html" class="logo">
                     <h1>syfai</h1>
                 </a>
-                <div class=""></div>
+                <ul class="network_div">
+                    <li><a href="#"><i class="fa-brands fa-facebook network"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram network"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok network"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin network"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter network"></i></a></li>
+                </ul>
             </div>
-        </footer>
+
+            <div class="ul_container">
+                <ul class="footer_ul">
+                    <li>
+                        <h1 class="main_footer">Company</h1>
+                    </li>
+                    <li><a href="#" class="footer_li">Text 1</a></li>
+                    <li><a href="#" class="footer_li">Text 2</a></li>
+                    <li><a href="#" class="footer_li">Text 3</a></li>
+                    <li><a href="#" class="footer_li">Text 4</a></li>
+                    <li><a href="#" class="footer_li">Text 5</a></li>
+                </ul>
+                <ul class="footer_ul">
+                    <li>
+                        <h1 class="main_footer">Community</h1>
+                    </li>
+                    <li><a href="#" class="footer_li">Text 1</a></li>
+                    <li><a href="#" class="footer_li">Text 2</a></li>
+                    <li><a href="#" class="footer_li">Text 3</a></li>
+                    <li><a href="#" class="footer_li">Text 4</a></li>
+                </ul>
+                <ul class="footer_ul">
+                    <li>
+                        <h1 class="main_footer">Privacy & Safety</h1>
+                    </li>
+                    <li><a href="#" class="footer_li">Text 1</a></li>
+                    <li><a href="#" class="footer_li">Text 2</a></li>
+                    <li><a href="#" class="footer_li">Text 3</a></li>
+                    <li><a href="#" class="footer_li">Text 4</a></li>
+                    <li><a href="#" class="footer_li">Text 5</a></li>
+                    <li><a href="#" class="footer_li">Text 6</a></li>
+                </ul>
+            </div>
+    </div>
+    </footer>
 
     </div>
     <script src="scripts/script.js"></script>

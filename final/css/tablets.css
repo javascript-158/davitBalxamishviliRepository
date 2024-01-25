@@ -1,0 +1,34 @@
+@media (max-width: 800px) {
+    .slider_images {
+        height: 180px;
+    }
+}
+@media (max-width: 768px) {
+    .slider_images {
+        height: 150px;
+    }
+}
+
+@media (max-width: 550px) {
+    .slider_images {
+        width: 100%;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 510px) {
+    .slider_images {
+        width: 80%;
+        height: 100px;
+    }
+}
+
+@media (max-width: 375px) {
+    .sign {
+        display: none;
+    }
+    .sign2 {
+        display: block;
+    }
+}
