@@ -114,6 +114,8 @@ body {
     height: 100%;
     background-color: var(--black);
     border-right: var(--Transparent_wite) solid 2px;
+    transition: 1s;
+    transition-timing-function: ease-out;
 }
 
 .fa-xmark2 {
@@ -333,6 +335,7 @@ aside {
 }
 
 .aside_nav {
+    max-width: 280px;
     padding: 0 8px 25px 0;
     width: 19.5%;
     display: flex;

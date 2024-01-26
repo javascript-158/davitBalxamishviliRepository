@@ -239,7 +239,7 @@ function randomDog() {
     })
 }
 
-function bbbb() {
+function angleRight() {
     let buttons = document.getElementById("randomButtons");
     let buttons2 = document.getElementById("randomButtons2");
     let buttons3 = document.getElementById("randomButtons3");
@@ -253,7 +253,7 @@ function bbbb() {
     Show.style.display = "none"
 }
 
-function dddd() {
+function angleLeft() {
     let buttons = document.getElementById("randomButtons");
     let buttons2 = document.getElementById("randomButtons2");
     let buttons3 = document.getElementById("randomButtons3");
