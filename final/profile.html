@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>syfai</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://kit.fontawesome.com/e77ac3a5f0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/laptops.css">
+    <link rel="stylesheet" href="css/tablets.css">
+</head>
+
+<body>
+    <div id="backgroundLogin" class="backgroundLogin">
+        <div id="loginWindow" class="login_window">
+            <h1 class="sign_up_h1">sign up</h1>
+            <button class="x" onclick="xmark()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="login_window_form">
+                <div style="width: 100%;height: 100%;">
+                    <input type="email" class="sign_up_input" id="email" placeholder="email">
+                    <p id="labelEmail" class="label_p">Email is oncorrreect</p>
+                </div>
+                <div style="width: 100%;height: 100%;">
+                    <input type="text" class="sign_up_input" id="username" placeholder="username">
+                    <p id="labelUsername" class="label_p">Username is oncorrreect</p>
+                </div>
+                <div style="width: 100%;height: 100%;">
+                    <input type="password" class="sign_up_input" id="password" placeholder="password">
+                    <p id="labelPassword" class="label_p">Password is oncorrreect</p>
+                </div>
+                <h3 style="margin-bottom: -25px;font-weight: 500;">Already have syfai?: <a href="#" class="form_a"
+                        onclick="LoginButton()">Log in</a></h3>
+                <button class="sign sign1" onclick="handleRegistration()">Next</button>
+                <p id="error"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="backgroundLogin2" class="backgroundLogin2">
+        <div id="loginWindow2" class="login_window2">
+            <h1 class="sign_up_h1">Log in </h1>
+            <button class="x" onclick="xmark2()"><i class="fa-solid fa-xmark"></i></button>
+            <form id="loginWindowForm" class="login_window_form">
+                <div style="width: 100%;height: 100%;">
+                    <input type="text" class="sign_up_input" id="username2" placeholder="username">
+                    <p id="labelUsername" class="label_p">Username is oncorrreect</p>
+                </div>
+                <div style="width: 100%;height: 100%;">
+                    <input type="password" class="sign_up_input" id="password2" placeholder="password">
+                    <p id="labelPassword" class="label_p">Password is oncorrreect</p>
+                </div>
+                <div>
+                    <input id="savePassword" class="checkbox" type="checkbox">
+                    <span>Save password</span>
+                </div>
+                <h3 style="margin-bottom: -25px;font-weight: 500;">New to syfai?: <a href="#" class="form_a"
+                        onclick="signupButton()">sign up</a></h3>
+                <button class="sign sign1" onclick="handleRegistration2()">finish</button>
+                <p id="error2"></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="backgroundLogin3" class="backgroundLogin2">
+        <div id="loginWindow2" class="burger_window">
+            <button onclick="xmark2()" class="bars_button"><i class="fa-solid fa-xmark fa-xmark2"></i></button>
+            <nav class="aside_nav">
+                <a href="index.html" class="mainTxt">
+                    <h2>Home</h2>
+                </a>
+                <a href="profile.html" class="mainTxt main">
+                    <h2>profile</h2>
+                </a>
+                <a href="About-us.html" class="mainTxt">
+                    <h2>About us</h2>
+                </a>
+                <div style="display: flex;align-items: center;gap: 8px;">
+                    <button class="sign2" onclick="LoginButton()">Log in</button>
+                    <button class="sign2" onclick="signupButton()">sign up</button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container cont2">
+        <header>
+            <nav class="header_nav">
+                <div style="display: flex;gap: 8px;">
+                    <button onclick="barsButton()" class="bars_button"><i class="fa-solid fa-bars"></i></button>
+                    <a href="index.html" class="logo">
+                        <h1>syfai</h1>
+                    </a>
+                </div>
+                <div>
+                    <button class="sign" onclick="LoginButton()">Log in</button>
+                    <button class="sign" onclick="signupButton()">sign up</button>
+                </div>
+            </nav>
+        </header>
+        <aside>
+            <nav class="aside_nav">
+                <h1 class="mainTxt2">main board</h1>
+                <a href="index.html" class="mainTxt">
+                    <h2>Home</h2>
+                </a>
+                <a href="profile.html" class="mainTxt main">
+                    <h2>profile</h2>
+                </a>
+                <a href="About-us.html" class="mainTxt">
+                    <h2>About us</h2>
+                </a>
+            </nav>
+        </aside>
+
+        <section class="section1 sec2">
+            <div class="user_container">
+                <img src="" id="userimg" class="userimg" alt="">
+                <h3 id="usernameProfile" class="hello user"></h3>
+            </div>
+            <div class="random_container">
+                <button onclick="randomAnime()" id="randomButtons" class="sign profil_but">Random anime</button>
+                <button onclick="randomDog()" id="randomButtons2" class="sign profil_but">Random dog</button>
+                <button onclick="Saved()" id="randomButtons4" class="sign profil_but">Saved</button>
+
+                <button onclick="angleLeft()" id="randomButtons3" class="sign profil_but"><i class="fa-solid fa-angle-left"></i></button>
+                <button onclick="angleRight()" id="Show" class="sign profil_but"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+
+            <div class="post_container">
+                <textarea id="postsInput"></textarea>
+                <button onclick="posts()" class="sign profil_but">posts</button>
+            </div>
+
+        </section>
+
+        <section class="section2">
+            <div style="width: 80%;" class="posts_div" id="postsDiv">
+
+            </div>
+        </section>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

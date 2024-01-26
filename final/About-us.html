@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>syfai</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://kit.fontawesome.com/e77ac3a5f0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/laptops.css">
+    <link rel="stylesheet" href="css/tablets.css">
+</head>
+
+<body>
+    <div id="backgroundLogin" class="backgroundLogin">
+        <div id="loginWindow" class="login_window">
+            <h1 class="sign_up_h1">sign up</h1>
+            <button class="x" onclick="xmark()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="login_window_form">
+                <div style="width: 100%;height: 100%;">
+                    <input type="email" class="sign_up_input" id="email" placeholder="email">
+                    <p id="labelEmail" class="label_p">Email is oncorrreect</p>
+                </div>
+                <div style="width: 100%;height: 100%;">
+                    <input type="text" class="sign_up_input" id="username" placeholder="username">
+                    <p id="labelUsername" class="label_p">Username is oncorrreect</p>
+                </div>
+                <div style="width: 100%;height: 100%;">
+                    <input type="password" class="sign_up_input" id="password" placeholder="password">
+                    <p id="labelPassword" class="label_p">Password is oncorrreect</p>
+                </div>
+                <h3 style="margin-bottom: -25px;font-weight: 500;">Already have syfai?: <a href="#" class="form_a"
+                        onclick="LoginButton()">Log in</a></h3>
+                <button class="sign sign1" onclick="handleRegistration()">Next</button>
+                <p id="error"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="backgroundLogin2" class="backgroundLogin2">
+        <div id="loginWindow2" class="login_window2">
+            <h1 class="sign_up_h1">Log in </h1>
+            <button class="x" onclick="xmark2()"><i class="fa-solid fa-xmark"></i></button>
+            <form id="loginWindowForm" class="login_window_form">
+                <div style="width: 100%;height: 100%;">
+                    <input type="text" class="sign_up_input" id="username2" placeholder="username">
+                    <p id="labelUsername" class="label_p">Username is oncorrreect</p>
+                </div>
+                <div style="width: 100%;height: 100%;">
+                    <input type="password" class="sign_up_input" id="password2" placeholder="password">
+                    <p id="labelPassword" class="label_p">Password is oncorrreect</p>
+                </div>
+                <div>
+                    <input id="savePassword" class="checkbox" type="checkbox">
+                    <span>Save password</span>
+                </div>
+                <h3 style="margin-bottom: -25px;font-weight: 500;">New to syfai?: <a href="#" class="form_a"
+                        onclick="signupButton()">sign up</a></h3>
+                <button class="sign sign1" onclick="handleRegistration2()">finish</button>
+                <p id="error2"></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="backgroundLogin3" class="backgroundLogin2">
+        <div id="loginWindow2" class="burger_window">
+            <button onclick="xmark2()" class="bars_button"><i class="fa-solid fa-xmark fa-xmark2"></i></button>
+            <nav class="aside_nav">
+                <a href="index.html" class="mainTxt">
+                    <h2>Home</h2>
+                </a>
+                <a href="profile.html" class="mainTxt">
+                    <h2>profile</h2>
+                </a>
+                <a href="About-us.html" class="mainTxt main">
+                    <h2>About us</h2>
+                </a>
+                <div style="display: flex;align-items: center;gap: 8px;">
+                    <button class="sign2" onclick="LoginButton()">Log in</button>
+                    <button class="sign2" onclick="signupButton()">sign up</button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container contUS">
+        <header>
+            <nav class="header_nav">
+                <div style="display: flex;gap: 8px;">
+                    <button onclick="barsButton()" class="bars_button"><i class="fa-solid fa-bars"></i></button>
+                    <a href="index.html" class="logo">
+                        <h1>syfai</h1>
+                    </a>
+                </div>
+                <div>
+                    <button class="sign" onclick="LoginButton()">Log in</button>
+                    <button class="sign" onclick="signupButton()">sign up</button>
+                </div>
+            </nav>
+        </header>
+
+        <aside>
+            <nav class="aside_nav">
+                <h1 class="mainTxt2">main board</h1>
+                <a href="index.html" class="mainTxt">
+                    <h2>Home</h2>
+                </a>
+                <a href="profile.html" class="mainTxt">
+                    <h2>profile</h2>
+                </a>
+                <a href="About-us.html" class="mainTxt main">
+                    <h2>About us</h2>
+                </a>
+            </nav>
+        </aside>
+
+        <section class="section1 sct" style="height: 5000px;">
+            <h1 class="hello hello2">About us</h1>
+
+            <p class="ipsum dolor">Lorem ipsum dolor sit guram amet consectetur adipisicing elit. Autem rerum voluptates
+                perferendis
+                maxime tempora animi, nesciunt laudantium dolor enim recusandae illum aliquam, officia,
+                repudiandae obcaecati voluptatem veniam non necessitatibus deleniti ducimus ea ipsa? Ipsam
+                ducimus corrupti quo tenetur animi facilis sint maxime quaerat dignissimos expedita perspiciatis
+                minus aperiam illum quae architecto obcaecati praesentium asperiores placeat, fugit saepe nemo
+                commodi magnam, omnis iste. Saepe vero illum similique vel quia pariatur, mollitia a deleniti
+                officiis voluptate non incidunt. Non odit jigar eveniet accusamus aspernatur in tempora quae
+                exercitationem delectus.
+            </p>
+
+
+            <p class="Lorem" id="ipsum1">what you can do in syfai</p>
+
+            <div class="Sponsors_div" id="SponsorsDiv">
+                <p class="ipsum dolor" id="ipsum2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+                    aliquam neque
+                    sint ullam hic dolores, quia sed voluptas facere quasi pariatur modi, eius accusamus qui libero
+                    harum? Optio, provident sit?
+                    Quidem obcaecati minus iure, mollitia ex laboriosam adipisci ad quae ea aut libero eligendi,
+                    veritatis magni ut doloremque commodi ab! Repellendus sit totam minus nisi velit ipsam fuga ducimus
+                    quas.</p>
+            </div>
+
+            <p class="Creator" id="Creator">Creator</p>
+            <div class="Creator_div" id="CreatorDiv">
+                <p class="Creator_p" id="CreatorP"><span class="span_creator_p">name:</span> დათო</p>
+                <p class="Creator_p" id="CreatorP2"><span class="span_creator_p">last name:</span> ბალხამიშვილი</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer_div1">
+                <a href="index.html" class="logo">
+                    <h1>syfai</h1>
+                </a>
+                <ul class="network_div">
+                    <li><a href="#"><i class="fa-brands fa-facebook network"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram network"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok network"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin network"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter network"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="ul_container">
+                <ul class="footer_ul">
+                    <li>
+                        <h1 class="main_footer">Company</h1>
+                    </li>
+                    <li><a href="#" class="footer_li">Text 1</a></li>
+                    <li><a href="#" class="footer_li">Text 2</a></li>
+                    <li><a href="#" class="footer_li">Text 3</a></li>
+                    <li><a href="#" class="footer_li">Text 4</a></li>
+                    <li><a href="#" class="footer_li">Text 5</a></li>
+                </ul>
+                <ul class="footer_ul">
+                    <li>
+                        <h1 class="main_footer">Community</h1>
+                    </li>
+                    <li><a href="#" class="footer_li">Text 1</a></li>
+                    <li><a href="#" class="footer_li">Text 2</a></li>
+                    <li><a href="#" class="footer_li">Text 3</a></li>
+                    <li><a href="#" class="footer_li">Text 4</a></li>
+                </ul>
+                <ul class="footer_ul">
+                    <li>
+                        <h1 class="main_footer">Privacy & Safety</h1>
+                    </li>
+                    <li><a href="#" class="footer_li">Text 1</a></li>
+                    <li><a href="#" class="footer_li">Text 2</a></li>
+                    <li><a href="#" class="footer_li">Text 3</a></li>
+                    <li><a href="#" class="footer_li">Text 4</a></li>
+                    <li><a href="#" class="footer_li">Text 5</a></li>
+                    <li><a href="#" class="footer_li">Text 6</a></li>
+                </ul>
+            </div>
+    </div>
+    </footer>
+
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/scroll.js"></script>
+</body>
+
+</html>
